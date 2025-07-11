@@ -28,6 +28,19 @@ const getCurrentWeather = (latitude, longitude) => {
       const icon = document.querySelector(".icon");
       icon.src = `https://openweathermap.org/img/wn/${result.weather[0].icon}@2x.png`
       
+      let scale = 1.5;
+
+      function zoomIn() {
+        scale += 0.1;
+        img1.style.transform = `scale(${scale})`;
+      }
+
+      function zoomOut() {
+        scale -= 0.1;
+        img1.style.transform = `scale(${scale})`;
+}
+    
+      
     });
 };
 
